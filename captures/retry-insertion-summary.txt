@@ -1,0 +1,11 @@
+﻿CAPTURE — INSERTION RETRY (EXECUTION REELLE)
+Commande: docker compose --profile pipeline run --build --rm pipeline
+S3_PREFIX=retry-demo/
+SIMULATE_INSERT_FAILURES=1
+Code de sortie observe: 0
+
+2026-11-10 15:06:29,633 INFO data_pipeline.pipeline: 2 fichier(s) genere(s) puis envoye(s) sur S3.
+2026-11-10 15:06:30,169 WARNING data_pipeline.database: Insertion de retry-demo/transactions_001.csv echouee 
+2026-11-10 15:06:31,491 INFO data_pipeline.database: Fichier insere: retry-demo/transactions_001.csv (5 
+2026-11-10 15:06:31,615 INFO data_pipeline.database: Fichier insere: retry-demo/transactions_002.csv (5 
+2026-11-10 15:06:31,615 INFO data_pipeline.pipeline: Pipeline terminee: 2 objet(s) examine(s).

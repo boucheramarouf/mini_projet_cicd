@@ -1,0 +1,14 @@
+﻿CAPTURE — ECHEC DE TRAITEMENT (EXECUTION REELLE)
+Commande: docker compose --profile pipeline run --build --rm --entrypoint python pipeline -m data_pipeline.cli run-all --simulate-processing-failure
+S3_PREFIX=failure-demo/
+Code de sortie observe: 1
+
+2026-11-10 15:05:10,872 INFO data_pipeline.pipeline: 2 fichier(s) genere(s) puis envoye(s) sur S3.
+Traceback (most recent call last):
+  File "<frozen runpy>", line 198, in _run_module_as_main
+  File "<frozen runpy>", line 88, in _run_code
+  File "/app/data_pipeline/cli.py", line 55, in <module>
+  File "/app/data_pipeline/cli.py", line 45, in main
+  File "/app/data_pipeline/pipeline.py", line 66, in run_pipeline
+  File "/app/data_pipeline/pipeline.py", line 27, in process_object
+RuntimeError: Echec de traitement volontaire (demo).

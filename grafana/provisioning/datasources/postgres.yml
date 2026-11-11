@@ -1,0 +1,16 @@
+apiVersion: 1
+
+datasources:
+  - name: Transactions PostgreSQL
+    uid: transactions-db
+    type: postgres
+    access: proxy
+    url: postgres:5432
+    user: pipeline
+    secureJsonData:
+      password: "$__env{POSTGRES_PASSWORD}"
+    jsonData:
+      database: transactions
+      sslmode: disable
+      postgresVersion: 1600
+      timescaledb: false

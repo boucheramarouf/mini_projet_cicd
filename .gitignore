@@ -1,0 +1,7 @@
+.env
+.env.deploy
+.venv/
+__pycache__/
+.pytest_cache/
+*.py[cod]
+data/generated/
